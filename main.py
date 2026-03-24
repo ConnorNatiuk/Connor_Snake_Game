@@ -1,17 +1,8 @@
 from Food import Food
 from Snake import Snake
 from Game_Logic import Game_logic
+import Parameters
 from tkinter import *
-import random
-
-GAME_WIDTH = 800
-GAME_HEIGHT = 800
-SPEED = 50
-SPACE_SIZE = 50
-BODY_PARTS = 3
-SNAKE_COLOR = "#FF69B4"
-FOOD_COLOR = "#8F1402"
-BACKGROUND_COLOR = "#111184"
 
 window = Tk()
 window.title("Snake Game")
@@ -22,7 +13,7 @@ direction = "down"
 label = Label(window, text="Score:{}".format(score), font=('consolas', 40))
 label.pack()
 
-canvas = Canvas(window, bg=BACKGROUND_COLOR, height=GAME_HEIGHT, width=GAME_WIDTH)
+canvas = Canvas(window, bg=Parameters.BACKGROUND_COLOR, height=Parameters.GAME_HEIGHT, width=Parameters.GAME_WIDTH)
 canvas.pack()
 
 window.update()
